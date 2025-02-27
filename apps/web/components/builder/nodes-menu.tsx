@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { Mail, Linkedin, Github, Twitter } from "lucide-react";
+import { Mail, Linkedin, Github, Twitter, CloudUpload } from "lucide-react";
 
 import { Card } from "@workspace/ui/components/card";
 import { Button } from "@workspace/ui/components/button";
@@ -40,9 +40,13 @@ export function NodesMenu({ position, onAddNode, onClose }: NodesMenuProps) {
   const nodeOptions: NodeOption[] = [
     {
       type: "contextAsset",
-      label: "Gmail",
-      icon: <Mail className="w-5 h-5" />,
-      data: { label: "Context Asset - Gmail", icon: "mail", service: "gmail" },
+      label: "Upload",
+      icon: <CloudUpload className="w-5 h-5" />,
+      data: {
+        label: "Context Asset - Upload",
+        icon: "upload",
+        service: "upload",
+      },
     },
     {
       type: "contextAsset",
